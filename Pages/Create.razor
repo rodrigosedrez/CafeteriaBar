@@ -1,0 +1,53 @@
+﻿@page "/create"
+@using CafeteriaFacul_net7.Data
+
+<h1>Create post "@_produtoToCreate.Name"</h1>
+
+<EditForm Model="_produtoToCreate" OnValidSubmit="CreateProduto">
+    <div class="form-group mb-3">
+        <label for="produtoName">Name</label>
+        <InputText @bind-Value="_produtoToCreate.Name"
+                   class=form-control id="produtoName" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="produtoDescription">Description</label>
+        <InputText @bind-Value="_produtoToCreate.Description"
+                   class=form-control id="produtoDescription" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="produtoImageSource">ImageSource</label>
+        <InputText @bind-Value="_produtoToCreate.ImageSource"
+                   class=form-control id="produtoImageSource" />
+    </div>
+
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <button class="btn btn-success" type="submit">Save</button>
+    <button @onclick="@(() => navigationManager.NavigateTo("/adm"))"
+            class="btn btn-secondary">
+        Cancel
+    </button>
+</EditForm>
+
+@code
+{
+    [Inject] ProdutoDataContext AppDBContext { get; set; } = null!;
+    [Inject] NavigationManager navigationManager { get; set; } = null!;
+
+    private Produto _produtoToCreate = new Produto
+        {
+           Name="Nome do seu produto",
+           Description="Descrição do seu produto",
+           ImageSource="url da imagem"
+        };
+
+    private async Task CreateProduto()
+    {
+        await AppDBContext.Produtoss.AddAsync(_produtoToCreate);
+        await AppDBContext.SaveChangesAsync();
+        navigationManager.NavigateTo("/");
+    }
+}

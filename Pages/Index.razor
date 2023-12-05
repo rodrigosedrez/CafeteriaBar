@@ -1,0 +1,43 @@
+﻿@page "/"
+@using CafeteriaFacul_net7.Data
+@using Microsoft.EntityFrameworkCore
+
+<h1>Home</h1>
+
+
+
+
+        @if (_produto != null)
+        {
+            foreach (var produto in _produto)
+            {
+
+        <div class="col-md-4 mb-2">
+          
+                <div class="card">
+                    <img class="img-thumbnail" src="@produto.ImageSource">
+                    <div class="card-body">
+                    <h5 class="mb-4">@produto.Name</h5>
+                        <h7 class="mb-4">
+                            @produto.Description
+                        </h7>
+                    </div>
+                </div>
+            
+        </div>
+            }   
+        }
+  
+
+@code
+{
+    [Inject] ProdutoDataContext produtoDataContext { get; set; } = null!;
+    private List<Produto> _produto = new List<Produto>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _produto = await produtoDataContext.Produtoss.ToListAsync();
+    }
+
+ 
+}

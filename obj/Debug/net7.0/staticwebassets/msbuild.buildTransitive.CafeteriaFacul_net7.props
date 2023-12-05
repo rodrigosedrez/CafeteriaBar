@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\CafeteriaFacul_net7.props" />
+</Project>

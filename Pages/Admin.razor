@@ -1,0 +1,60 @@
+﻿@page "/adm"
+@using CafeteriaFacul_net7.Data
+@using Microsoft.EntityFrameworkCore
+
+<h1>Produtos</h1>
+
+<a href="/Create" class="btn btn-success">Create</a>
+
+<table class="table table-responsive table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id </th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">ImageSource</th>
+            <th scope="col">CRUD</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (_produto != null)
+        {
+            foreach (var produto in _produto)
+            {
+                <tr>
+                    <th scope="row">@produto.Id</th>
+                    <td>@produto.Name</td>
+                    <td>@produto.Description</td>
+                    <td><img src="@produto.ImageSource" width="60" /></td>
+                    <td>
+                        <a href="/update/@produto.Id"
+                           class="btn btn-warning">Update</a>
+                        <button class="btn btn-danger"
+                                @onclick="() => DeletePost(produto)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+@code
+{
+    [Inject] ProdutoDataContext produtoDataContext { get; set; } = null!;
+    private List<Produto> _produto = new List<Produto>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _produto = await produtoDataContext.Produtoss.ToListAsync();
+    }
+
+    private async Task DeletePost(Produto produtotoDelete)
+    {
+        produtoDataContext.Produtoss.Remove(produtotoDelete);
+        await produtoDataContext.SaveChangesAsync();
+        _produto.Remove(produtotoDelete);
+        StateHasChanged();
+    }
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CafeteriaFacul_net7.props" />
+</Project>
