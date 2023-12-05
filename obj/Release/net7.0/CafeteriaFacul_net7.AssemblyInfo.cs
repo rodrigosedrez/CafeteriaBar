@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CafeteriaFacul_net7")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e602e49b0fa13ff58cd8c288d760a2cce3d96d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a7a2a99caa240c91a62bfa28ef0edc16a1bb9ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("CafeteriaFacul_net7")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CafeteriaFacul_net7")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

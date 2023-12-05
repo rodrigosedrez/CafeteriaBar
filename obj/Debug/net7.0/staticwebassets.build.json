@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UVpE0Ynt51asw3mIg3YVUtIFi4vd2Wq6dmHF2V7zQcY=",
+  "Hash": "2EoD3QRJzz11Hood57ghOYn+oKo5lNHTerr3IjgMv5E=",
   "Source": "CafeteriaFacul_net7",
   "BasePath": "_content/CafeteriaFacul_net7",
   "Mode": "Default",
@@ -91,25 +91,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
-      "Identity": "C:\\PROJECTS\\CafeteriaFacul_net7\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "CafeteriaFacul_net7",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\PROJECTS\\CafeteriaFacul_net7\\wwwroot\\",
-      "BasePath": "_content/CafeteriaFacul_net7",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\PROJECTS\\CafeteriaFacul_net7\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
@@ -224,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Identity": "C:\\PROJECTS\\CafeteriaFacul_net7\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "CafeteriaFacul_net7",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PROJECTS\\CafeteriaFacul_net7\\wwwroot\\",
+      "BasePath": "_content/CafeteriaFacul_net7",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\PROJECTS\\CafeteriaFacul_net7\\wwwroot\\css\\open-iconic\\ICON-LICENSE",

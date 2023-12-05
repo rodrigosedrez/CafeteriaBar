@@ -1,7 +1,7 @@
 ﻿@page "/create"
 @using CafeteriaFacul_net7.Data
 
-<h1>Create post "@_produtoToCreate.Name"</h1>
+<h2>Criar Produto </h2>
 
 <EditForm Model="_produtoToCreate" OnValidSubmit="CreateProduto">
     <div class="form-group mb-3">
@@ -39,15 +39,12 @@
 
     private Produto _produtoToCreate = new Produto
         {
-           Name="Nome do seu produto",
-           Description="Descrição do seu produto",
-           ImageSource="url da imagem"
         };
 
     private async Task CreateProduto()
     {
         await AppDBContext.Produtoss.AddAsync(_produtoToCreate);
         await AppDBContext.SaveChangesAsync();
-        navigationManager.NavigateTo("/");
+        navigationManager.NavigateTo("/adm");
     }
 }
